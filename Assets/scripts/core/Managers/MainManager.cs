@@ -14,26 +14,7 @@ namespace Managers.Datas
 
         public void EntryPoint()
         {
-            StartAsteroidsManager();
-            StartOtherSpaceShipsManager();
-            SpawnPlayer();
-        }
 
-        private void SpawnPlayer()
-        {
-            SpaceShipControl player = Instantiate(playerPrefab);
-            Services.GetManager<OtherSpaceshipManager>().SetPlayer(player);
-        }
-
-        private void StartOtherSpaceShipsManager()
-        {
-            Services.GetManager<OtherSpaceshipManager>().StartWork();
-        }
-
-        private void StartAsteroidsManager()
-        {
-
-            Services.GetManager<AsteroidManager>().StartWork();
         }
     }
 }
